@@ -29,4 +29,3 @@ git checkout -- filename 将工作去的内容回退到和暂存区一样
 
 #当需要删除版本库中的一个文件时可以在工作区把这个文件删除了，然后用git rm filename 或者git add filename再git commit -m 'remove filename'
 
-this is a test
