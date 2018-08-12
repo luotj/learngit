@@ -1,0 +1,32 @@
+#将工作区的修改提交到暂存区
+git add filename
+#将暂存区的修改提交的版本库
+git commit -m "xxx"
+
+#查看commit历史记录
+git log --pretty=oneline
+
+#查看执行的指令历史
+git reflog
+
+#将工作区的文件回退到某次提交版本
+git reset --hard HEAD^  回退到上一次提交
+git reset --hard HEAD^^ 回退到上上次提交
+git reset --hard commitId 回退到指定commitId版本
+
+#查看工作区的内容与暂存区内容的区别
+git diff filename
+
+#查看工作区和版本库里面的区别
+git diff HEAD -- filename
+
+#将工作区的内容回退到最近一次add或者commit(当暂存区为空时回退到最近一次commit，否则回退到工作区)
+git checkout -- filename
+
+#如果想放弃已经add的修改，并且恢复工作区到最近一次commit，则执行如下两条命令:
+git reset HEAD filename  将暂存区的内容回退到上一次commit
+git checkout -- filename 将工作去的内容回退到和暂存区一样
+
+#当需要删除版本库中的一个文件时可以在工作区把这个文件删除了，然后用git rm filename 或者git add filename再git commit -m 'remove filename'
+
+this is a test
